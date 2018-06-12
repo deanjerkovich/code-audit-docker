@@ -10,15 +10,25 @@ EXPOSE 22
 #ENV NAME world
 
 RUN apt-get update
+RUN apt-get -y install apt-utils
 RUN apt-get -y install zsh
 RUN apt-get -y install vim
 RUN apt-get -y install git
 RUN apt-get -y install curl
-RUN apt-get -y install apt-utils
 RUN apt-get -y install wget
+RUN apt-get -y install tmux
+RUN apt-get -y install silversearcher-ag
+RUN apt-get -y install ctags
+RUN apt-get -y install cscope
+
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN chsh -s /bin/zsh
+
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+RUN ~/.fzf/install
+
+ENV PATH="/root/.fzf/bin:${PATH}"
 
 RUN git clone https://github.com/deanjerkovich/dotfiles.git && \
   cd dotfiles && \
