@@ -34,4 +34,8 @@ RUN git clone https://github.com/deanjerkovich/dotfiles.git && \
   cd dotfiles && \
   ./install.sh
 
+RUN git config --global oh-my-zsh.hide-status 1
+
+RUN mkdir /root/code_review
+
 CMD ["/usr/bin/env","zsh"]
