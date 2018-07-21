@@ -20,7 +20,7 @@ RUN apt-get -y install tmux
 RUN apt-get -y install silversearcher-ag
 RUN apt-get -y install ctags
 RUN apt-get -y install cscope
-
+RUN apt-get -y install cloc
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN chsh -s /bin/zsh
