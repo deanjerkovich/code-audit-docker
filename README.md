@@ -65,3 +65,9 @@ now, whenever you're in a file in vim, `Ctrl-]` will take you to the definitions
 
 ## TODO EVERYTHING ELSE once I've used it for ages
 
+- should PCT-VIM be integrated? https://github.com/d0c-s4vage/pct-vim
+- what about code grep tools/their grep lists:
+    - https://github.com/wireghoul/graudit
+    - https://github.com/veorq/blueflower
+    - https://github.com/nccgroup/VCG
+    - devskim
