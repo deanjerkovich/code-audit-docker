@@ -36,6 +36,9 @@ RUN git clone https://github.com/deanjerkovich/dotfiles.git && \
 
 RUN git config --global oh-my-zsh.hide-status 1
 
+RUN mkdir -p ~/.vim/plugin
+RUN curl http://cscope.sourceforge.net/cscope_maps.vim -o ~/.vim/plugin/cscope_maps.vim
+
 RUN mkdir /root/code_review
 
 CMD ["/usr/bin/env","zsh"]
