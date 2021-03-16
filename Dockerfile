@@ -1,8 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 EXPOSE 22
 
-RUN apt-get update && apt-get -y install apt-utils zsh vim git curl wget tmux silversearcher-ag ctags cscope cloc && apt-get clean
+RUN apt-get update && apt-get -y install python3 apt-utils python3-distutils zsh vim git curl wget tmux silversearcher-ag ctags cscope cloc && apt-get clean
+RUN curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py 
+RUN python3 /tmp/get-pip.py
+RUN python3 -m pip install semgrep
 
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN chsh -s /bin/zsh
