@@ -32,6 +32,8 @@ cd /root/code_review
 tmux
 ```
 
+you may want to `git config oh-my-zsh.hide-info 1`
+
 - tmux is great for managing your workspace. I use Ctrl-A as the tmux trigger. Try these:
 
 ```
